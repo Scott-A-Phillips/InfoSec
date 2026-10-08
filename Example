@@ -1,5 +1,5 @@
 
-In accordance with Kerchoffs Principle, here is an actuual InfoSec Blob..
+In accordance with Kerckhoffs's Principle, here is an actual InfoSec Blob.
 The information Object is One Cipher encrypted within the Jwe field below.
 
 {

@@ -1,17 +1,17 @@
-This is the minium Mandatory Security Policy for InfoSec TS-SCI with codeward..
-Unlike traditional SCIF solutions, there exists no physical (paper etc) copieds of any Inforamtion Object, the system is entirely digital.
-The traditional OPSEC preventing engress by devices no ;longer applies to thius SCIF facility as the sole objective of Need to Know it to ensure that the people with the need 
-have secure and timely access to the Information Object as required to performe their assigned funtion.
+This is the minimum Mandatory Security Policy for InfoSec TS-SCI with codeword.
+Unlike traditional SCIF solutions, there exists no physical (paper etc) copies of any Information Object, the system is entirely digital.
+The traditional OPSEC preventing egress by devices no longer applies to this SCIF facility as the sole objective of Need to Know is to ensure that the people with the need 
+have secure and timely access to the Information Object as required to perform their assigned function.
 
-Individuals with the appropriate clearance and "need-to-know" can use authorised ITS secured devices systems within a SCIF to access specific information as determioned by the compartment owner.
+Individuals with the appropriate clearance and "need-to-know" can use authorised ITS secured devices systems within a SCIF to access specific information as determined by the compartment owner.
 
 Each end device with a Fido Provider installed SHALL:
 1. Utilise end device hardware with a TPM 2.0 secure device.
-2. Utilise a OS with Secure Boot via this TMP 2.0 device
-3. Enable per access account, biometric (fingerprint authetication) via extenal fingerprint hardware linked to, and utilising the TPM 2.0 device.
-4. The external hardware fingerprint reade shall securely store the finger print data on the external hardware ONLY. The finger print data shall never be stored on the end device.
-5. The external USB fingerprint reader shall store upto 10 sets of finger print data, this data shall require a device PIN to bind to any OS account.
-6. Within any secure device whcih has access to SCI information object, the object must remain ITS encrypted. When a information object is viewed (digital copy) 
+2. Utilise an OS with Secure Boot via this TPM 2.0 device
+3. Enable per access account, biometric (fingerprint authentication) via external fingerprint hardware linked to, and utilising the TPM 2.0 device.
+4. The external hardware fingerprint reader shall securely store the finger print data on the external hardware ONLY. The finger print data shall never be stored on the end device.
+5. The external USB fingerprint reader shall store up to 10 sets of finger print data, this data shall require a device PIN to bind to any OS account.
+6. Within any secure device which has access to an SCI information object, the object must remain ITS encrypted. When an information object is viewed (digital copy) 
 the system must isolate and pin the memory to ensure no non-ITS secured information object exists.
-7. An ITS secure shreader must be used to destroy any Information Object.
-8. Device JwTokens have a maxium reveral peiood of 30 days, and all assocaited variables need to be concurrently renewed with the JwToken..
+7. An ITS secure shredder must be used to destroy any Information Object.
+8. Device JwTokens have a maximum renewal period of 30 days, and all associated variables need to be concurrently renewed with the JwToken.

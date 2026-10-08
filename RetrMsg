@@ -3,7 +3,7 @@
  [TestMethod]
  public void UseCase_retrMsg()
  {
-     // Infrastructure-less secure mesaging.
+     // Infrastructure-less secure messaging.
      SET_INFO();
      string folder = Environment.GetEnvironmentVariable("Envionment");
      string sitrep = "Date: 2026-04-25; Location: Sector Alpha; Units active: 3rd Infantry Battalion; Recent actions: Secured perimeter, identified enemy movement; Current status: All units operational.";
@@ -14,7 +14,7 @@
 
      // Extract Function endpoint from Device Token
      Uri _baseUri = new Uri(fp.Audience());
-     // Build funtion endpoint Uri
+     // Build function endpoint Uri
      HttpClient _httpClient = new HttpClient();
      string _relativeUrl = "api/RetrMsg";
      Uri _uri = new Uri(_baseUri, _relativeUrl);
@@ -31,7 +31,7 @@
          foreach (byte[] msgBytes in msgs)
          {
              Fido.MsgToken t = Fido.MsgToken.Decode(fp, Encoding.UTF8.GetString(msgBytes)); // decode/decrypt message
-             string cnt = Encoding.UTF8.GetString(t.Cnt); // PlinText message
+             string cnt = Encoding.UTF8.GetString(t.Cnt); // PlainText message
              Assert.AreEqual(sitrep, cnt);
          }
      

@@ -18,7 +18,7 @@
      // Extract Function endpoint 
        Uri _baseUri = new Uri(fp.Audience());
 
-     // Build funtion endpoint Uri
+     // Build function endpoint Uri
      HttpClient _httpClient = new HttpClient();
      string _relativeUrl = "api/Connect";
      Uri _uri = new Uri(_baseUri, _relativeUrl);
@@ -34,9 +34,9 @@
      HttpResponseMessage response = _httpClient.PostAsync(_uri, content).Result;
      if (response.IsSuccessStatusCode)
      {
-         // download vernan cipher protected secret (Medley vectors) bound to the devices..
+         // download Vernam cipher protected secret (Medley vectors) bound to the devices.
          string connectToken = response.Content.ReadAsStringAsync().Result;
-         // Save for out of channel distribution vai any means.
+         // Save for out of channel distribution via any means.
          string fpath = @"D:\Examples\INFO\Files\\Connect-" + sin + ".jwt";
          System.IO.File.WriteAllText(fpath, connectToken);
 

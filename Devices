@@ -10,7 +10,7 @@ public void infoSec_devices_list()
     // Extract Function endpoint 
     Uri _baseUri = new Uri(fp.Audience());
 
-    // Build funtion endpoint Uri
+    // Build function endpoint Uri
     HttpClient _httpClient = new HttpClient();
     string _relativeUrl = "api/Devices";
     Uri _uri = new Uri(_baseUri, _relativeUrl);
@@ -29,7 +29,7 @@ public void infoSec_devices_list()
     HttpResponseMessage response = _httpClient.GetAsync(completeUri).Result;
     if (response.IsSuccessStatusCode)
     {
-        // Download One Cipher protected shared secret (Medley vectors) bound to each devices..
+        // Download One Cipher protected shared secret (Medley vectors) bound to each device.
         string json = response.Content.ReadAsStringAsync().Result;
         List<string> devices = System.Text.Json.JsonSerializer.Deserialize<List<string>>(json);
     }
@@ -54,7 +54,7 @@ Note a User Token can only add device tokens, please obtain additional UserToken
      // Extract Function endpoint 
      Uri _baseUri = new Uri(fp.Audience());
 
-     // Build funtion endpoint Uri
+     // Build function endpoint Uri
      HttpClient _httpClient = new HttpClient();
      string _relativeUrl = "api/Devices";
      Uri _uri = new Uri(_baseUri, _relativeUrl);
@@ -73,7 +73,7 @@ Note a User Token can only add device tokens, please obtain additional UserToken
      HttpResponseMessage response = _httpClient.GetAsync(completeUri).Result;
      if (response.IsSuccessStatusCode)
      {
-         // Download One Cipher protected shared secret (Medley vectors) bound to each devices..
+         // Download One Cipher protected shared secret (Medley vectors) bound to each device.
          string authToken = response.Content.ReadAsStringAsync().Result;
      }
      else
@@ -85,4 +85,4 @@ Note a User Token can only add device tokens, please obtain additional UserToken
 
  }
 
-// REmove Device from Compartment
+// Remove Device from Compartment

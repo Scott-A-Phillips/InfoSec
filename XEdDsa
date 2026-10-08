@@ -10,13 +10,13 @@
      Fido.FidoProvider fp = new Fido.FidoProvider(userTokenPath);
      string jwtkn = fp.GetJwToken();
 
-     // Send Secure Messsage
+     // Send Secure Message
      byte[] content = Encoding.UTF8.GetBytes("Test");
      byte[] hashBytes = SHA256.Create().ComputeHash(content);
 
      // Extract Function endpoint from Device Token
      Uri _baseUri = new Uri(fp.Audience());
-     // Build funtion endpoint Uri
+     // Build function endpoint Uri
      HttpClient _httpClient = new HttpClient();
      string _relativeUrl = "api/Sign";
      Uri _uri = new Uri(_baseUri, _relativeUrl);

@@ -13,7 +13,7 @@
 
        // Extract Function endpoint from Device Token
        Uri _baseUri = new Uri(fp.Audience());
-       // Build funtion endpoint Uri
+       // Build function endpoint Uri
        HttpClient _httpClient = new HttpClient();
        string _relativeUrl = "api/Retrieve";
        Uri _uri = new Uri(_baseUri, _relativeUrl);

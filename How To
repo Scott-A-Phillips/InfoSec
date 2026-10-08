@@ -1,12 +1,12 @@
 Sensitive Compartmented Information (SCI)
-Work Flow - Information Theoretic Secured InfoSec-(information with need to know)
+Work Flow - Information Theoretic Secured InfoSec (information with need to know)
 
 1. Create new node-domain with optional "universal" this provides cryptographic sovereign isolation from all other sovereign domains.
 2. Create Secure Identity -> This becomes SCI-Compartment.
 3. Compartment User, creates new device authorisation tokens with ITSDSA512 signatures
-4. Individual device used Authorisation token to create a new OS isolated user.
+4. Individual device uses an Authorisation token to create a new OS isolated user.
 5. Device is registered to SCI-Compartment and universal
-6. Access to device is via a mandatory biometric authentication.
+6. Access to a device is via mandatory biometric authentication.
 
 Device can store and view SCI information objects with or without "codeword" support.
 All communications are asynchronous datagrams and ITS protected via the One Cipher.

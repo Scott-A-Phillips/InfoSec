@@ -1,10 +1,10 @@
 
 This file provides the step of how to use this site supplied code base.
 
-Development Envionment
+Development Environment
 1. Windows 11 2025 Update (Version 25H2)
 2. Visual Studio 2022
-3. Obtain a "Device Token" from your node operator, this will self configure your devlopment envionment.
+3. Obtain a "Device Token" from your node operator, this will self configure your development environment.
 
 Steps
 1. Develop a Fido provider in accordance with the Fido Developers Guide for TLS last mile communications or licence a high assurance binary library, whcih can be used out of box.
@@ -18,10 +18,10 @@ Steps
 3. Request authorisation tokens for additional devices to access this compartment.
 https://github.com/Money-2021/InfoSec/blob/main/Devices
 
-3. Great new Visual Studio Net8.0 MSTest (Microsoft's built-in framework)
-4. Down laod the UnitTest cases as provided
-5. Adapt the supplied code to your local MSTest envionment. including configuration of your DeviceToken pathway.
-6. Execute the supplied UnitTest cases to verify correct operation of the code funtionality.
+4. Great new Visual Studio Net8.0 MSTest (Microsoft's built-in framework)
+5. Download the UnitTest cases as provided
+6. Adapt the supplied code to your local MSTest environment. including configuration of your DeviceToken pathway.
+7. Execute the supplied UnitTest cases to verify correct operation of the code functionality.
 
 Suggested MSTest flow
 1. UseCase_store()
@@ -29,7 +29,7 @@ Suggested MSTest flow
 
 
 Notes
-1. Typically a professional developer should allocate around 30 minutes to dcomplete the fist test case.
-2. Visual Studion should automaticlaly download or request the download of all required Net8.0 supporting libaries.
+1. Typically a professional developer should allocate around 30 minutes to complete the first test case.
+2. Visual Studio should automatically download or request the download of all required Net8.0 supporting libraries.
 
-Enjoy the new world of Information Thretic Secured  world.
+Enjoy the new world of Information Theoretic Secured world.

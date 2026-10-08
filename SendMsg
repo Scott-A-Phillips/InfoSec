@@ -1,4 +1,4 @@
-// Send offline message via infastcture store/retrieve 
+// Send offline message via infrastructure store/retrieve 
 
 [TestMethod]
 public void UseCase_sendMsg()
@@ -10,7 +10,7 @@ public void UseCase_sendMsg()
     Fido.FidoProvider fp = new Fido.FidoProvider(userTokenPath);
 
     // MsgMe receiver token
-    Fido.MsgMe m = new Fido.MsgMe(fp); // infastucture-less messaging
+    Fido.MsgMe m = new Fido.MsgMe(fp); // infrastructure-less messaging
     string msgMeToken = m.Encode();
 
     // Battlefield forward observer -> Sender
@@ -18,9 +18,9 @@ public void UseCase_sendMsg()
     userTokenPath = @"D:\Examples\" + folder + "\\Token-" + sin + ".json";
     fp = new Fido.FidoProvider(userTokenPath);
 
-    // Millitary Message SITREP
+    // Military Message SITREP
     string sitrep = "Date: 2026-04-25; Location: Sector Alpha; Units active: 3rd Infantry Battalion; Recent actions: Secured perimeter, identified enemy movement; Current status: All units operational.";
-    // Create infastureless Message    
+    // Create infrastructure-less Message    
     Fido.MsgToken tkn = new Fido.MsgToken();
     tkn.Jti = Guid.NewGuid();
     tkn.Cnt = Encoding.UTF8.GetBytes(sitrep);
@@ -30,7 +30,7 @@ public void UseCase_sendMsg()
     tkn.Subject = "SITREP";
     string msg = tkn.Encode(fp, msgMeToken);
 
-    // Post MsgToken to Infastruture store/retrieve
+    // Post MsgToken to Infrastructure store/retrieve
     StringContent content = new StringContent(msg);
 
     Uri _baseUri = new Uri(fp.Audience());

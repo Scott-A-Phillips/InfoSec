@@ -126,7 +126,7 @@
 
         // Obtain Function JwToken
         HttpClient _httpClient = new HttpClient();
-        // Build funtion endpoint Uri
+        // Build function endpoint Uri
         string _relativeUrl = "api/VaultMe";
         Uri _uri = new Uri(_baseUri, _relativeUrl);
         _httpClient.BaseAddress = _baseUri;

@@ -1,9 +1,9 @@
 
-This is a P2P-Offline, infastructure-less ITS (One Cipher) secure mesaging unit test case. 
+This is a P2P-Offline, infrastructure-less ITS (One Cipher) secure messaging unit test case. 
 [TestMethod]
  public void infoSec_msg_send()
  {
-     // Infrastructure-less secure mesaging.
+     // Infrastructure-less secure messaging.
      SET_INFO();
      string folder = Environment.GetEnvironmentVariable("Envionment");
 
@@ -20,21 +20,21 @@ This is a P2P-Offline, infastructure-less ITS (One Cipher) secure mesaging unit 
      userTokenPath = @"D:\Examples\" + folder + "\\Token-" + sin + ".json";
      fp = new Fido.FidoProvider(userTokenPath);
 
-     // Send Secure Messsage
+     // Send Secure Message
      byte[] cnt = Encoding.UTF8.GetBytes("Test");
      Fido.MsgToken tkn = new Fido.MsgToken(cnt);
      tkn.Subject = "Test Msg";
      tkn.FileName = "Test.txt";
      string msg = tkn.Encode(fp, msgMeToken);
 
-     // Send secure Mesage to receipient via any means offline or online.
+     // Send secure Message to recipient via any means offline or online.
      string path = @"D:\Examples\" + folder + "\\Msg-" + sin + ".json";
      File.WriteAllText(path, msg);
  }
  [TestMethod]
  public void infoSec_msg_rec()
  {
-     // Infrastructure-less secure mesaging.
+     // Infrastructure-less secure messaging.
      SET_INFO();
      string folder = Environment.GetEnvironmentVariable("Envionment");
 
